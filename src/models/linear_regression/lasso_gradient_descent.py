@@ -31,13 +31,13 @@ class linear_regression_gradient_descent_lasso:
             self.parameters -= self.learning_rate * (grad + reg)
 
 
-            print(f"Epoch {iteration+1}: Loss = {loss}")
+          #  print(f"Epoch {iteration+1}: Loss = {loss}")
 
     def predict(self,X) :
          X=X.copy()
          X["bias"] = 1
          x_matrix=X.to_numpy()
-         return x_matrix @  self.parameters
+         return (x_matrix @  self.parameters).flatten()
 
 
 

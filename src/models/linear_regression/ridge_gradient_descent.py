@@ -31,7 +31,7 @@ class linear_regression_gradient_descent_ridge:
             self.parameters -= self.learning_rate * (grad + reg)
 
 
-            print(f"Epoch {iteration+1}: Loss = {loss}")
+           
 
     def predict(self,X) :
          X=X.copy()

@@ -1,7 +1,7 @@
 import numpy as np
 
 class linear_regression_gradient_descent:
-    def __init__(self,iterations=20,learning_rate=0.1) :
+    def __init__(self,iterations=20,learning_rate=0.01) :
    
         self.iterations=iterations
         self.parameters=0
@@ -25,7 +25,7 @@ class linear_regression_gradient_descent:
             loss = (1 / (2 * X.shape[0])) * np.sum(error**2)
             self.parameters-= self.learning_rate* (1 / X.shape[0]) * (x_matrix.T @ error)
 
-            print(f"Epoch {iteration+1}: Loss = {loss}")
+           # print(f"Epoch {iteration+1}: Loss = {loss}")
 
     def predict(self,X) :
          X=X.copy()

@@ -9,14 +9,17 @@ class linear_regression_closed_form:
         x_matrix=X.to_numpy()
         y_matrix=y.to_numpy().reshape(-1,1)
         x_matrix_transpose = x_matrix.T
+        I = np.identity(x_matrix.shape[1])
+        I[-1, -1] = 0
 
-        self.parameters= np.linalg.inv(x_matrix_transpose @ x_matrix + self.lambda_param * np.identity(x_matrix.shape[1])) @ (x_matrix_transpose @ y_matrix )
+        self.parameters= np.linalg.pinv(x_matrix_transpose @ x_matrix + self.lambda_param * I) @ (x_matrix_transpose @ y_matrix )
         # [b1,w1,w2,...,wn]^T
         
     def predict(self,X):
         X=X.copy()
         X["bias"] = 1
-        return X.to_numpy() @ self.parameters
+        return (X.to_numpy() @ self.parameters).flatten()
+
     
     
     

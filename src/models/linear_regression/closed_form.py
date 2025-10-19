@@ -18,7 +18,8 @@ class linear_regression_closed_form:
     def predict(self,X):
         X=X.copy()
         X["bias"] = 1
-        return (X.to_numpy() @ self.parameters).flatten()
+        return (X.to_numpy() @ self.parameters).flatten() # (1,)
+                                                             #(1,1)
 
     
     

@@ -23,9 +23,11 @@ class linear_regression_gradient_descent:
             error = y_pred - y_matrix  # (n,1)
             # x (n,d+1) (n,1)   => (d+1,1)
             loss = (1 / (2 * X.shape[0])) * np.sum(error**2)
-            self.parameters-= self.learning_rate* (1 / X.shape[0]) * (x_matrix.T @ error)
+            self.parameters -= self.learning_rate* (1 / X.shape[0]) * (x_matrix.T @ error)
 
            # print(f"Epoch {iteration+1}: Loss = {loss}")
+
+    
 
     def predict(self,X) :
          X=X.copy()
@@ -36,7 +38,4 @@ class linear_regression_gradient_descent:
 
 
          # => [1,2,3,4] n (n,1)
-
-
-            
             # [b1,w1,w2,...,wn]^T

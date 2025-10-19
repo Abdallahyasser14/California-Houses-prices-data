@@ -16,7 +16,7 @@ def split_train_val_test(X, y, train_size=0.7, val_size=0.15, test_size=0.15, ra
     val_idx = indices[train_end:val_end]
     test_idx = indices[val_end:]
     
-    # Use .iloc to keep pandas DataFrame/Series
+ 
     X_train, y_train = X.iloc[train_idx], y.iloc[train_idx]
     X_val, y_val = X.iloc[val_idx], y.iloc[val_idx]
     X_test, y_test = X.iloc[test_idx], y.iloc[test_idx]

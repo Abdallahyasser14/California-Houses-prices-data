@@ -1,7 +1,3 @@
-Here’s a polished and professional **GitHub README.md** version of your project, formatted with Markdown and emojis for visual appeal and readability:
-
----
-
 # 🧠 Machine Learning Algorithms from Scratch: Linear Regression
 
 This project implements several **core machine learning algorithms from scratch** using only standard Python libraries like **NumPy**.
@@ -99,4 +95,5 @@ The **notebooks/** directory includes:
 | 20 | Sklearn Ridge GD (Dropped Corr)          | 0.483501     | 0.427438     |
 
 ---
+
 
